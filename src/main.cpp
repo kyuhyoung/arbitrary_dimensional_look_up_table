@@ -105,7 +105,7 @@ tuple<vector<int>, vector<pair<vector<double>, vector<double> > >,
     vector<vector<int> > li_li_idx;
     for (int iO = 0; iO < n_obj; iO++)
     {
-        std::cout << "iO : " << iO << " / " << n_obj << std::endl;
+        //std::cout << "iO : " << iO << " / " << n_obj << std::endl;
         std::vector<int> li_idx(n_dim);
         iD = 0;
         int remained = iO;
@@ -113,16 +113,16 @@ tuple<vector<int>, vector<pair<vector<double>, vector<double> > >,
         {
             li_idx[iD] = floor(remained / li_n_acc[iD]);
             remained -= li_idx[iD] * li_n_acc[iD];
-            std::cout << "\tiD : " << iD << " / " << n_dim << ", li_idx[iD] : " << li_idx[iD] << " / " << nn[iD] << std::endl;
+            //std::cout << "\tiD : " << iD << " / " << n_dim << ", li_idx[iD] : " << li_idx[iD] << " / " << nn[iD] << std::endl;
         }
         li_idx[iD] = remained;
-        std::cout << "\tiD : " << iD << " / " << n_dim << ", li_idx[iD] : " << li_idx[iD] << " / " << nn[iD] << std::endl;
+        //std::cout << "\tiD : " << iD << " / " << n_dim << ", li_idx[iD] : " << li_idx[iD] << " / " << nn[iD] << std::endl;
         li_li_idx.push_back(li_idx);
     }
     //exit(0);
     for (int iO = 0; iO < n_obj; iO++)
     {
-        std::cout << "iO : " << iO << " / " << n_obj << std::endl;
+        //std::cout << "iO : " << iO << " / " << n_obj << std::endl;
         vector<double> li_src(n_dim), li_tgt(n_dim);
         for (iD = 0; iD < n_dim; iD++)
         {
@@ -136,7 +136,7 @@ tuple<vector<int>, vector<pair<vector<double>, vector<double> > >,
             //cout << "cm : " << cm << endl;
             li_src[iD] = v_src;
             li_tgt[iD] = v_tgt;
-            std::cout << "\tiD : " << iD << " / " << n_dim << ", idx : " << idx << " / " << nn[iD] << ", v_src : " << v_src << ", v_tgt : " << v_tgt << std::endl;
+            //std::cout << "\tiD : " << iD << " / " << n_dim << ", idx : " << idx << " / " << nn[iD] << ", v_src : " << v_src << ", v_tgt : " << v_tgt << std::endl;
             
             if(v_src > li_pa_pa_min_max_pa_min_max[iD].first.second)
             {
