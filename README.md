@@ -1,4 +1,4 @@
-# Build and use
+# Build
 ```console
 foo@bar:~$ make
 ```
