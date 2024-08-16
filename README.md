@@ -10,9 +10,10 @@ foo@bar:~$ arbitrary_dimensional_look_up_table_cpp [# of dimension]
 ```console
 foo@bar:~$ arbitrary_dimensional_look_up_table_cpp 3
 ```
-## Test case of 7 dimension
+## Test case of 6 dimension
 ```console
 foo@bar:~$ arbitrary_dimensional_look_up_table_cpp 7
 ```
+### Do not try 7 or bigger dimensional test since it takes too much time.
 
 
